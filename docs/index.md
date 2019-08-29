@@ -41,12 +41,15 @@ This is a 3rd party API (unofficial) so the service does not have direct access 
 First You will have to login with your credentials and then you will have access to following data
 
    **Get Attendance Data**
+
     You will get data regarding attendance course wise for both theory and labs as in total number of classes which happened till date, number of attended and the percentage of attendance
 
    **Get Digital Assignments Data** 
+
    You will have get data regarding any digital Assignment's which has to be submitted but not has been for both theory and lab again course wise
 
    **Get internal marks**
+   
     view You will get data regarding all the internal marks updated on the portal till date courseware for both theory and lab
 
    **You can get all the data in one go.**
@@ -99,7 +102,9 @@ InternalMarks_data = obj.InternalMarks()
 Attendance_data = obj.InternalMarks(True)
 ```
 
+
 > Getting All of them
+
 ```python
 from  VtopScraperCache import *
 
