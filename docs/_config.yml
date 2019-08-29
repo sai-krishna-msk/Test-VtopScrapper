@@ -1,7 +1,7 @@
 # Site settings
-title: Solo, a Jekyll Theme
-tag_text: Solo
-description: Solo is a Jekyll theme that supports single-page websites only, but supports them well. Yes, it’s responsive.
+title: Vtop Scrapper
+tag_text: Vtop Scrapper
+description: Vtop Scapper is a 3rd party API for a student portal.
 
 # Build settings
 markdown: kramdown
