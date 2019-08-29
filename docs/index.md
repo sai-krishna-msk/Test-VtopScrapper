@@ -47,20 +47,20 @@ Project is expected to make progress towards providing the services on maximum p
 
 First You will have to login with your credentials and then you will have access to following data
 
-   #### **Fetch Attendance Data**
+#### **Fetch Attendance Data**
 
   You will get data regarding attendance course wise for both theory and labs as in total number of classes which happened till date, number of attended and the percentage of attendance
   
   <br>
 
-   #### **Fetch Digital Assignments Data** 
+#### **Fetch Digital Assignments Data** 
 
    You will have get data regarding any digital Assignment's which has to be submitted but not has been for both theory and lab again course wise
    
    <br>
    
 
-   #### **Fetch internal marks**
+#### **Fetch internal marks**
 
    View You will get data regarding all the internal marks updated on the portal till date courseware for both theory and lab
     
