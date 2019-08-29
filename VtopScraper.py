@@ -177,7 +177,7 @@ class VtopScraper:
 
 
 
-	def loginFetch(self , verbose=None):
+	def _loginFetch(self):
 		
 		"""
 
@@ -210,29 +210,13 @@ class VtopScraper:
 
 		self.LoginFlag = True
 		self.LogoutFlag = False
+		return True
 
 
 
 
 
-		if(verbose):
-			all_data={}
-			all_data["AssignmentData"] = self.Get_Assignment_Status(verbose=True)
-			all_data["AttendanceData"] = self.GetAttendance(verbose=True)
-			all_data["InternalMakrsData"] = self.InternalMarks(verbose=True)
-
-
-			
-			self.s.get(self.urlLogout , headers = self.headers)
-			return all_data
-
-		self.endTime= time.time()
 		
-		
-		#print("--- %s seconds ---" % (time.time() - start_time))
-
-			
-		return "Sucessfully logged in"
 
 
 	# Here Plug in  Digital Assignment
@@ -254,6 +238,7 @@ class VtopScraper:
 
 		
 		return None 
+
 	def _get_each_sub_Assign(self ,sub_header ):
 		if(sub_header["type"]=="ELA"):
 
@@ -395,7 +380,8 @@ class VtopScraper:
 
 		
 
-	def Get_Assignment_Status(self, verbose=False):
+	def Get_Assignment_Data(self, verbose=False):
+		self._loginFetch()
 		# Return the list of subjects assigemnts of which assigments are not submitted
 		r= self.s.post(self.urlAssignEnter , headers=self.headers)
 		r_list = self.s.post(self.urlAssignSubSelect , data =self.semID,  headers = self.headers)
@@ -420,7 +406,8 @@ class VtopScraper:
 
 
 	# Here Plug in Attendance
-	def GetAttendance(self, verbose=False):
+	def Get_Attendance_Data(self, verbose=False):
+		self._loginFetch()
 		r1 =self.s.post(self.urlAttend  , headers = self.headers)
 		r4 = self.s.post(self.urlAttend, data = self.semID , headers = self.headers)
 
@@ -461,7 +448,8 @@ class VtopScraper:
 
 
 	# Here plug in Internal Makrs View
-	def InternalMarks(self, verbose=False):
+	def Get_Internal_Marks_Data(self, verbose=False):
+		self._loginFetch()
 		r1 = self.s.post(self.urlMarkEnter,  headers = self.headers)
 		r2 = self.s.post(self.urlMarkView,data = self.semID , headers = self.headers )
 
@@ -494,7 +482,8 @@ class VtopScraper:
 		return (markView)
 
 
-	def get_personal_info(self):
+	def Get_Profile_Data(self, verbose=False):
+		self._loginFetch()
 
 		"""
 
@@ -503,27 +492,37 @@ class VtopScraper:
 
 
 		"""
-		
+		r= self.s.post(self.urlPersonalInfo , headers= self.headers)
 
-		with open(self.path+'/PersonalInfo/PersonalInfo.html', 'rb') as f:
-			details_r = f.read()
-			f.close()
+		# with open(self.path+'/PersonalInfo/PersonalInfo.html', 'rb') as f:
+		# 	details_r = f.read()
+		# 	f.close()
 
 		
-		soup = BeautifulSoup(details_r , 'html.parser')
+		soup = BeautifulSoup(r.content , 'html.parser')
 		INFO = []
 
 		for each in soup.findAll('td', {'style':'background-color: #f2dede;'}):
 			INFO.append(each.text)
-		self.s.get(self.urlLogout , headers = self.headers)
+		
+		if(not verbose):
+			self.s.get(self.urlLogout , headers = self.headers)
 		return {'Name':INFO[0],
 				'DOB': INFO[1],
 				'Gender': INFO[2],
-				'Email': INFO[3] 
+				'Email': INFO[28] 
 
 		}
 
 
+	def Fetch_All_Data(self):
+		self._loginFetch()
+		all_data={}
+		all_data["AssignmentData"] = self.Get_Assignment_Data(verbose=True)
+		all_data["AttendanceData"] = self.Get_Attendance_Data(verbose=True)
+		all_data["InternalMakrsData"] = self.Get_Internal_Marks_Data()
+
+		return all_data
 
 
 
