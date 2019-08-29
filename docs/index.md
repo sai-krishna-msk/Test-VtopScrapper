@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Contents
+## Contents
 
 [Introduction](#intro)
 
