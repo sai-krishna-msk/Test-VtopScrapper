@@ -1,8 +1,12 @@
 ---
 layout: default
+title: Home
+nav_order: 1
+description: "Vtop Scraper is an api"
+permalink: /
 ---
 
-## Contents
+# Contents
 
 [Introduction](#intro)
 
@@ -26,9 +30,9 @@ This is a 3rd party API (unofficial) so the service does not have direct access 
 
     pip install vtopscrapper
 
-**Web API** If an app you intend to build restrics you from using python (like android app in which case you most likely are to use JAVA) in that case you can make http requests to the API
+**Web API** If an app you intend to build restricts you from using python (like android app in which case you most likely are to use JAVA) in that case you can make http requests to the API
 
-**Note** : Project is expected to make progress towards providing the services on maximum possible languages in near fututre eliminiating the need of using it over web (Instead just downloading the package) but for now it is only available in python.
+**Note** : Project is expected to make progress towards providing the services on maximum possible languages in near future eliminating the need of using it over web (Instead just downloading the package) but for now it is only available in python.
 
 <a name="features"></a>
 
@@ -36,11 +40,11 @@ This is a 3rd party API (unofficial) so the service does not have direct access 
 
 First You will have to login with your credentials and then you will have access to following data
 
-*   Get Attendance Data You will get data regarding attendance course wise for both theory and labs as in total number of classes which happend till date, numbre of attended and the percentage of attendance
+*   Get Attendance Data You will get data regarding attendance course wise for both theory and labs as in total number of classes which happened till date, number of attended and the percentage of attendance
 
-*   Get Digital Assignments Data You will have get data regarding any digital Assignemnts which has to be submitted but not has been for both theory and lab again course wise
+*   Get Digital Assignments Data You will have get data regarding any digital Assignment's which has to be submitted but not has been for both theory and lab again course wise
 
-*   Get internal marks view You will get data regarding all the internal makrs updated on the portal till date coursewise for both theory and lab
+*   Get internal marks view You will get data regarding all the internal marks updated on the portal till date courseware for both theory and lab
 
 *   You can get all the data in one go.
 
