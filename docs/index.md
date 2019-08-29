@@ -40,18 +40,76 @@ This is a 3rd party API (unofficial) so the service does not have direct access 
 
 First You will have to login with your credentials and then you will have access to following data
 
-*   Get Attendance Data You will get data regarding attendance course wise for both theory and labs as in total number of classes which happened till date, number of attended and the percentage of attendance
+   **Get Attendance Data**
+    You will get data regarding attendance course wise for both theory and labs as in total number of classes which happened till date, number of attended and the percentage of attendance
 
-*   Get Digital Assignments Data You will have get data regarding any digital Assignment's which has to be submitted but not has been for both theory and lab again course wise
+   **Get Digital Assignments Data** 
+   You will have get data regarding any digital Assignment's which has to be submitted but not has been for both theory and lab again course wise
 
-*   Get internal marks view You will get data regarding all the internal marks updated on the portal till date courseware for both theory and lab
+   **Get internal marks**
+    view You will get data regarding all the internal marks updated on the portal till date courseware for both theory and lab
 
-*   You can get all the data in one go.
+   **You can get all the data in one go.**
 
 <a name="htc"></a>
 
 ## How to use
 
 **Package**
+
+__Getting Attendance Data__
+
+```python
+from  VtopScraperCache import *
+obj = VtopScraper(RegisterartionID, <password>)
+# Creates a Session
+obj.loginFetch()
+Attendance_data = obj.GetAttendance()
+#Session ends here
+
+# If you need to continue session then 
+Attendance_data = obj.GetAttendance(True)
+```
+
+__Get Digital Assignments Data__
+
+```python
+from  VtopScraperCache import *
+obj = VtopScraper(RegisterartionID, <password>)
+# Creates a Session
+obj.loginFetch()
+Assignment_data = obj.Get_Assignment_Status()
+#Session ends here
+
+# If you need to continue session then 
+Attendance_data = obj.Get_Assignment_Status(True)
+```
+
+__Get internal marks__
+
+```python
+from  VtopScraperCache import *
+obj = VtopScraper(RegisterartionID, <password>)
+# Creates a Session
+obj.loginFetch()
+InternalMarks_data = obj.InternalMarks()
+#Session ends here
+
+# If you need to continue session then 
+Attendance_data = obj.InternalMarks(True)
+```
+
+__Getting All of them__
+```python
+from  VtopScraperCache import *
+
+obj = VtopScraper(RegisterartionID, <password>)
+
+all_data = obj.loginFetch(True)
+
+```
+
+
+
 
 **Web API**
