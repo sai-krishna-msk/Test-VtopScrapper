@@ -18,7 +18,9 @@
 #### VtopScrapper is an API to VIT-AP's Student portal which enables you to build applications using the data provided by the portal
 
 #### This is a 3rd party API (unofficial) so the service does not have direct access to the database instead it's consists of scrapping scripts in the backend (making it a little slower )<a name="usage"></a>
+<br>
 
+<a name="usage"></a>
 ## Usage
 
 #### **Package** 
@@ -36,6 +38,7 @@ If an app you intend to build restricts you from using python (like android app 
 #### **Note** 
 
 Project is expected to make progress towards providing the services on maximum possible languages in near future eliminating the need of using it over web (Instead just downloading the package) but for now it is only available in python.
+<br>
 
 <a name="features"></a>
 
@@ -60,10 +63,9 @@ First You will have to login with your credentials and then you will have access
 ​	Get Profile Information registered in the Portal 
 
 
+#### **Fetch all the data in one go**
 
-   #### **Fetch all the data in one go**
-
-
+<br>
 
 <a name="htc"></a>
 
@@ -134,6 +136,7 @@ all_data = obj.Fetch_All_Data()
 
 **Web API**
 
+<br>
 
 
 <a name="intro"></a>
