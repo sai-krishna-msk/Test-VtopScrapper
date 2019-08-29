@@ -57,7 +57,7 @@ First You will have to login with your credentials and then you will have access
 
 **Package**
 
-__Getting Attendance Data__
+> Getting Attendance Data
 
 ```python
 from  VtopScraperCache import *
@@ -71,7 +71,7 @@ Attendance_data = obj.GetAttendance()
 Attendance_data = obj.GetAttendance(True)
 ```
 
-__Get Digital Assignments Data__
+> Get Digital Assignments Data
 
 ```python
 from  VtopScraperCache import *
@@ -85,7 +85,7 @@ Assignment_data = obj.Get_Assignment_Status()
 Attendance_data = obj.Get_Assignment_Status(True)
 ```
 
-__Get internal marks__
+> Get internal marks
 
 ```python
 from  VtopScraperCache import *
@@ -99,7 +99,7 @@ InternalMarks_data = obj.InternalMarks()
 Attendance_data = obj.InternalMarks(True)
 ```
 
-__Getting All of them__
+> Getting All of them
 ```python
 from  VtopScraperCache import *
 
