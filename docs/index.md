@@ -18,6 +18,10 @@ permalink: /
 
 ### [Response](#resp)
 
+
+
+
+
 <a name="intro"></a>
 
 ## Introduction
@@ -42,20 +46,29 @@ permalink: /
 
 ##### Project is expected to make progress towards providing the services on maximum possible languages in near future eliminating the need of using it over web (Instead just downloading the package) but for now it is only available in python.
 
+
+
+
+
 <a name="features"></a>
 
 ### Features
 
 ##### First You will have to login with your credentials and then you will have access to following data
 
+
+
    #### **Fetch Attendance Data**
 
 ##### You will get data regarding attendance course wise for both theory and labs as in total number of classes which happened till date, number of attended and the percentage of attendance
 
 
+
    #### **Fetch Digital Assignments Data** 
 
    ##### You will have get data regarding any digital Assignment's which has to be submitted but not has been for both theory and lab again course wise
+
+
 
    #### **Fetch internal marks**
 
@@ -63,11 +76,15 @@ permalink: /
 
 #### **Fetch Profile Information**
 
-​	##### Get Profile Information registered in the Portal 
+##### Get Profile Information registered in the Portal 
 
 
 
    #### **Fetch all the data in one go**
+
+
+
+
 
 <a name="htc"></a>
 
