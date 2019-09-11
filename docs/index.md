@@ -33,6 +33,11 @@ pip install vtopscrapper
 
 #### **Web API** 
 
+
+
+
+
+
 If an app you intend to build restricts you from using python (like android app in which case you most likely are to use JAVA) in that case you can make http requests to the API
 
 #### **Note** 
@@ -147,7 +152,57 @@ all_data = obj.Fetch_All_Data()
 
 ```
 
-**Web API**
+### **Web API**
+
+
+> #### Fetch Attendance Data
+
+```bash
+https://testherokuscrapper.herokuapp.com/FetchAttendanceData?username=<insert your user name>&password=<insert your password>
+
+```
+
+
+
+> #### Fetch Digital Assignments Data
+
+```bash
+
+https://testherokuscrapper.herokuapp.com/FetchDigitialAssignmentData?username=<insert your user name>&password=<insert your password>
+
+```
+
+
+
+> #### Fetch internal marks
+
+```bash
+
+https://testherokuscrapper.herokuapp.com/FetchInternalMarks?username=<insert your user name>&password=<insert your password>
+
+
+```
+
+
+
+> #### Fetch Profile Information
+
+```bash
+
+https://testherokuscrapper.herokuapp.com/FetchProfileData?username=<insert your user name>&password=<insert your password>
+
+```
+
+
+
+> #### Fetch All of them
+
+```bash
+
+https://testherokuscrapper.herokuapp.com/FetchAllData?username=<insert your user name>&password=<insert your password>
+
+```
+
 
 <br>
 
